@@ -1,0 +1,18 @@
+.bannerSlideshow{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  

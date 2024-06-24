@@ -1,0 +1,163 @@
+.ticket {
+    background: var(--white);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-weight: lighter;
+    gap: 1rem;
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        padding: 0.5rem 0rem;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+
+        p {
+            font-weight: bold;
+            display: block;
+        }
+    }
+
+    &__price {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.25rem;
+
+        h4 {
+            font-size: 2rem;
+            display: block;
+
+
+        }
+
+        h3 {
+            font-size: 4rem;
+            font-weight: bold;
+            display: block;
+        }
+    }
+
+    &__description {
+        p {
+            text-align: center;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 0 1rem;
+        }
+
+        padding: 1rem 0rem;
+        border-bottom: 1px solid var(--gray-300);
+    }
+
+    &__list {
+        padding: 1rem 2.5rem;
+
+        li {
+            font-weight: lighter;
+            font-size: 1rem;
+            gap: 0.1rem;
+        }
+
+        ul {
+            list-style: none;
+        }
+    }
+
+    &__button {
+
+        a {
+            text-decoration: none;
+            padding: 1rem;
+            color: var(--white);
+            cursor: pointer;
+            border-radius: 8px;
+            font-weight: bold;
+            display: block;
+        }
+    }
+}
+
+.border__bronze {
+    border: 1px solid var(--brand-bronze);
+}
+
+
+.border__silver {
+    border: 1px solid var(--brand-silver);
+}
+
+
+.border__gold {
+    border: 1px solid var(--brand-gold);
+}
+
+.border__diamond {
+    border: 1px solid var(--brand-diamond);
+}
+
+
+.price__bronze {
+    color: var(--brand-bronze);
+}
+
+.price__silver {
+    color: var(--brand-silver);
+}
+
+.price__gold {
+    color: var(--brand-gold);
+}
+
+.price__diamond {
+    color: var(--brand-diamond);
+    text-shadow: 1px 1px 2px var(--black);
+}
+
+.bronze {
+    background: var(--brand-bronze);
+}
+
+.silver {
+    background-color: var(--brand-silver);
+}
+
+.gold {
+    background-color: var(--brand-gold);
+}
+
+.diamond {
+    background-color: var(--brand-diamond);
+
+    a {
+        color: black !important;
+    }
+}
+
+.fadeIn {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+}
+
+.safari{
+    margin-top: 2rem;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

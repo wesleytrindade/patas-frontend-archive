@@ -1,0 +1,97 @@
+.main {
+    width: 100vw;
+
+    &__regras {
+       
+        &__grid {
+            display: grid;
+            width: 100%;
+            height: 100%;
+            padding: 2rem 2rem;
+            grid-template-columns: 1fr;
+
+            gap: 1rem;
+
+            &__item {
+                background: var(--white);
+                padding: 1rem 3rem;
+
+                &__image{
+                    margin-top: 1rem;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    justify-content: center;
+
+                    img{
+                        width: 100%;
+                        border-radius: 3%;
+                    }
+
+                }
+
+                h1 {
+                    font-family: 'KnockoutRegular';
+                    font-size: 2rem;
+                    font-weight: bold;
+                }
+
+                h3 {
+                    margin-top: 1rem;
+                    font-family: 'KnockoutRegular';
+                    font-size: 1.5rem;
+                }
+
+                h4 {
+                    margin-top: 0.5rem;
+                    font-family: 'GothamRegular';
+                    font-size: 1rem;
+
+                }
+
+                p {
+                    margin-top: 1rem;
+                    font-family: "Inter", sans-serif;
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                    font-weight: 400;
+
+                    strong{
+                        font-weight: bold;
+
+                    }
+                }
+
+                a {
+
+                    text-decoration: none;
+
+                    h3 {
+                        margin-top: 2rem;
+                        color: var(--brand-banana);
+                        text-shadow: 1px 1px 2px var(--black);
+                    }
+                }
+
+                ul{
+                    list-style:disc;
+                    margin-left:4rem;
+                }
+
+                
+
+               
+
+            }
+        }
+    }
+}
+
+@media(max-width:"768px"){
+    .main{
+        &__regras{
+            &__grid{
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}

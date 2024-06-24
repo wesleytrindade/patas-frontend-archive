@@ -1,0 +1,1 @@
+export const ShirtSize = ['P','M','G','GG','G1','G2','G3','G4','G5'];

@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE `Badge` ADD COLUMN `isMinor` BOOLEAN NOT NULL DEFAULT false;

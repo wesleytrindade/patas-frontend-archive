@@ -1,0 +1,75 @@
+.programacao {
+
+    background-image: url('/img/video-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__container {
+        background-color: rgba(255, 255, 255, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        h4 {
+            margin-top: 2rem;
+            font-family: 'KnockoutRegular';
+            font-size: 3rem;
+            color: var(--brand-banana);
+            text-shadow: 2px 2px 2px black;
+            text-align: center;
+            width: 100%;
+        }
+
+        table {
+            margin-top: 1rem;
+            border: 1px solid black;
+            border-radius: 7%;
+         
+
+            thead {
+                tr {
+
+                    &:first-child {
+                        background-color: var(--brand-banana);
+                        color: black;
+                        text-shadow: 1px 1px 1px white;
+                    }
+
+                    border: 1px solid black;
+                }
+            }
+
+            td,
+            th {
+                padding: 2rem 3rem;
+                border-right: 1px solid black;
+            }
+
+            td:last-child,
+            th:last-child {
+                border-right: none;
+            }
+        }
+    }
+}
+
+@media (max-width:"768px") {
+
+    .programacao {
+        &__container {
+            align-items: flex-start;
+            table {
+                padding: 0rem 1rem;
+
+                td,
+                th {
+                    padding: 2rem;
+                }
+            }
+        }
+    }
+}

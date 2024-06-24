@@ -1,0 +1,152 @@
+.main {
+    width: 100vw;
+
+    &__hospedagem {
+        background: url('/img/patas_banner.jpg') no-repeat;
+        background-size: cover;
+        width: 100%;
+
+        &__grid {
+            display: grid;
+            width: 100%;
+            height: 100%;
+            padding: 2rem 2rem;
+            background-color: rgba(225, 225, 230, 0.7);
+            grid-template-columns: 1fr 40.5rem;
+
+            gap: 1rem;
+
+            &__item {
+                background: var(--white);
+                padding: 1rem 3rem;
+
+                &__image{
+                    margin-top: 1rem;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    justify-content: center;
+
+                    img{
+                        width: 100%;
+                        border-radius: 3%;
+                    }
+
+                }
+
+                &__map{
+                    margin-top: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    iframe{
+                        width: 100%;
+                       
+                    }
+                }
+
+                h1 {
+                    font-family: 'KnockoutRegular';
+                    font-size: 2rem;
+                    font-weight: bold;
+                }
+
+                h3 {
+                    margin-top: 1rem;
+                    font-family: 'KnockoutRegular';
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+
+                h4 {
+                    margin-top: 0.5rem;
+                    font-family: "Inter", sans-serif;
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+
+                p {
+                    margin-top: 1rem;
+                    font-family: "Inter", sans-serif;
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                    font-weight: 400;
+
+                    strong{
+                        font-weight: bold;
+
+                    }
+                }
+
+                a {
+
+                    text-decoration: none;
+
+                    h3 {
+                        margin-top: 2rem;
+                        color: var(--brand-banana);
+                        text-shadow: 1px 1px 2px var(--black);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.grid {
+
+    &__container {
+        gap: 2rem;
+        background: rgba(255,255,255,1);
+        border-radius: 8px;
+        padding: 2rem 2rem;
+        width: 95%;
+        height: 450px;
+
+        &__content {
+
+            display: flex;
+            justify-content: left;
+            align-items: left;
+
+            flex-direction: line;
+            p {
+                margin-top: 1rem;
+                font-weight: lighter;
+                font-size: 1rem;
+                text-align: left;
+                line-height: 1.5rem;
+            }
+
+            a{
+                margin-top: 1rem;
+                padding: 1rem;
+                background-color: var(--brand-banana);
+                color: black;
+                border-radius: 3%;
+                text-decoration: none;
+                text-shadow: 1px 1px 1px white;
+
+                &:hover{
+                    opacity: 0.7;
+                }
+
+            }
+        }
+    }
+}
+
+@media(max-width:"768px"){
+    .main{
+        &__hospedagem{
+            &__grid{
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+    .grid{
+        &__container{
+            grid-template-columns: 1fr;
+        }
+    }
+}

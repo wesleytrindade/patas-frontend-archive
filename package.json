@@ -1,0 +1,45 @@
+{
+  "name": "patas-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start:teste": "next start -p 3005",
+    "start": "next start -p 8080",
+    "lint": "next lint",
+    "prisma:migration-dev": "dotenv -e .env.development -- prisma migrate dev",
+    "prisma:migration-prod": "dotenv -e .env.production -- prisma migrate dev",
+    "prisma:deploy-dev": "dotenv -e .env.development -- prisma migrate deploy",
+    "prisma:deploy-prod": "dotenv -e .env.production -- prisma migrate deploy",
+    "prisma:rollback-dev": "dotenv -e .env.development -- prisma migrate resolve --rolled-back 20240126194819_add_badge_filled",
+    "prisma:rollback-prod": "dotenv -e .env.production -- prisma migrate resolve --rolled-back 20240127000132_add_transaction_id"
+  },
+  "dependencies": {
+    "@hookform/error-message": "^2.0.1",
+    "@hookform/resolvers": "^3.3.4",
+    "@phosphor-icons/react": "^2.0.15",
+    "@prisma/client": "^5.8.1",
+    "aws-sdk": "^2.1536.0",
+    "axios": "^1.6.4",
+    "next": "^12.1.2",
+    "react": "^17.0.2",
+    "react-device-detect": "^2.2.3",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.49.3",
+    "react-hot-toast": "^2.4.1",
+    "react-multi-carousel": "^2.8.4",
+    "react-query": "^3.39.3",
+    "yup": "^1.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.2",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "prisma": "^5.8.1",
+    "sass": "^1.69.7",
+    "typescript": "^5"
+  }
+}

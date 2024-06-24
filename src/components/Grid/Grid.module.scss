@@ -1,0 +1,25 @@
+.grid{
+    display: grid;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2rem;
+    flex-direction: column;
+    grid-template-columns: 20.5rem 20.5rem 20.5rem;
+    width: 100vw;
+    gap:1.5rem;
+    padding: 2rem;
+
+    &__white{
+        background: var(--gray-100);
+    }
+
+    &__transparent{
+        background: transparent;
+    }
+}
+
+@media (max-width:"768px"){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+}

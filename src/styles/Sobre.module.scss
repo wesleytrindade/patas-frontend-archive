@@ -1,0 +1,80 @@
+.main {
+    background-image: url('/img/video-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        background-color: rgba(255, 255, 255, 0.9);
+
+        &__title {
+            margin-top: 3rem;
+
+            h2 {
+                font-family: 'KnockoutRegular';
+                font-size: 3rem;
+
+                strong {
+                    color: var(--brand-banana);
+                    text-shadow: 1px 1px 1px var(--black);
+                }
+            }
+
+        }
+
+        &__description {
+            margin-top: 2rem;
+            font-family: 'Inter';
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+            text-align: center;
+            padding: 4rem 10rem;
+        }
+
+        &__staff {
+            margin-top: 0rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            background: rgba(247, 201, 79, 0.5);
+
+            h2{
+                margin-top: 2rem;
+                font-family: 'KnockoutRegular';
+                font-size: 2rem;
+                text-shadow: 1px 1px 1px var(--white);
+            }
+            &__grid {   
+                display: grid;
+                grid-template-columns: 14rem 14rem 14rem 14rem;
+                padding: 2rem;
+                gap: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width:768px){
+    .main{
+        &__content{
+            font-size: 85%;
+
+            &__description{
+                padding: 2rem 5rem;
+            }
+            &__staff{
+
+                h2{
+                    font-size: 2rem;
+                }
+                &__grid{
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Badge{
+  id  Int @id @default(autoincrement())
+  ticketEmail String @db.VarChar(255)
+  ticketName String @db.VarChar(255)
+  fursonaName String @db.VarChar(400)
+  fursonaImageSrc String @db.VarChar(3000)
+  ticketTierId Int
+  shirtSize String? @db.VarChar(10)
+  isMinor Boolean @default(false)
+  TicketTier TicketTier @relation(fields: [ticketTierId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "Badge_ibfk_1" )
+
+  @@index([ticketTierId], map: "ticketTierId")
+}
+
+model TicketTier{
+  id Int @id @default(autoincrement())
+  ticketTier String @db.VarChar(30)
+  haveShirt Boolean @default(false)
+  badges Badge[]
+}
+
+model TicketEmail{
+  id Int @id @default(autoincrement())
+  name String @db.VarChar(255)
+  email String @db.VarChar(255)
+  ticketTier String @db.VarChar(255)
+  transactionId String @db.VarChar(500) @unique
+  sended Boolean @default(false)
+  badgeFilled Boolean @default(false) 
+}

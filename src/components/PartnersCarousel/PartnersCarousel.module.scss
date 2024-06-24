@@ -1,0 +1,38 @@
+.carousel {
+   
+
+    background-image: url('/img/patas_slideshow_7.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+
+    &__content {
+
+        padding: 2rem 2rem;
+        background-color: rgba(0, 0, 0, 0.7);
+        h3 {
+            font-size: 3rem;
+            font-family: 'KnockoutRegular';
+            color: var(--brand-banana);
+            text-shadow: 1px 1px 1px black;
+            width: 100%;
+            text-align: center;
+
+        }
+
+        &__grid {
+
+       
+            margin-top: 4rem;
+
+            img {
+                width: 200px;
+                height: 200px;
+
+                border-radius: 3%;
+            }
+
+        }
+    }
+}
